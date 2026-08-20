@@ -1,0 +1,113 @@
+// Google Fonts - Ubuntu
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+// Bootstrap
+@import "/assets/css/bootstrap.min.css";
+
+// Fontawesome Icon
+@import "/assets/css/fontawesome.min.css";
+
+// Animate Css
+@import "/assets/css/animate.css";
+
+// Magnific Popup
+@import "/assets/css/magnific-popup.min.css";
+
+// Swiper Js
+@import "/assets/css/swiper-bundle.min.css";
+
+// Theme Custom CSS
+@import "./main.scss";
+
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+a {
+  cursor: pointer !important;
+}
+.menuActive {
+  color: var(--theme-color2) !important;
+}
+.page-nav-wrap .active a {
+  background: linear-gradient(90deg, #7e8e95 0%, #0a0736 123.82%);
+  color: var(--white-color) !important;
+  border: 1px solid transparent !important;
+}
+.gt-mobile-menu {
+  .sub-menu {
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    &.active {
+      max-height: 500px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .testimonial-wrap.style3 .testimonial-slider3 .swiper-slide.tss3 {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+}
+// --toastify-z-index: 9999;
+
+.Toastify__toast-container {
+  z-index: 99999 !important;
+}
+.team-wrap.style2 .team-slider1 .swiper-slide.mr-0 {
+  // margin-right: 0px !important;
+  // width: 100% !important;
+  & > * {
+    width: 100%;
+  }
+}
+.gt-btn-icon {
+  text-wrap: nowrap;
+}
+
+/* Infinity Innovation flat corporate style overrides */
+.service-card,
+.offer-box,
+.process-card,
+.project-card,
+.team-card,
+.fancy-box,
+.counter-wrap,
+.cta-wrap,
+.contact-wrapper-2,
+.footer-widget,
+.video-box,
+.about-wrapper {
+  box-shadow: none !important;
+  border: 1px solid rgba(16, 24, 40, 0.08);
+  border-radius: 8px !important;
+}
+
+.gt-btn,
+.slider-arrow,
+.play-btn,
+input,
+textarea,
+select {
+  border-radius: 8px !important;
+}
+
+.service-wrap.style1,
+.service-area,
+.offering-wrap.style1,
+.project-wrap.style1,
+.work-process-wrap.style1,
+.team-wrap.style1,
+.blog-wrap.style1,
+.widget-area.style1 {
+  background-image: none !important;
+}
+
+.subtitle,
+.title,
+.hero-title,
+.hero-text {
+  letter-spacing: 0;
+}
+
+[class*="shape"] {
+  opacity: 0.2;
+}

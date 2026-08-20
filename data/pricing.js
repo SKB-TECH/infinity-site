@@ -1,0 +1,96 @@
+export const pricingPlans = [
+  {
+    badge: "Basic Plan",
+    price: "$49.00",
+    period: "Per Month",
+    backgroundImage: "url(/assets/img/bg/pricingCardThumbBg1_1.png)",
+    features: [
+      "Branding And Design Identity",
+      "Web Site Marketing Solutions",
+      "Free 15 GB Linux Hosting",
+      "24/7 System Monitoring",
+      "Unlimited Download Data",
+      "Branding and design Identity",
+    ],
+    buttonClass: "gt-btn style2 gt-btn-icon",
+    delay: ".3s",
+  },
+  {
+    badge: "Started Plan",
+    price: "$99.00",
+    period: "Per Month",
+    backgroundImage: "url(/assets/img/bg/pricingCardThumbBg1_1.png)",
+    features: [
+      "Branding And Design Identity",
+      "Web Site Marketing Solutions",
+      "Free 15 GB Linux Hosting",
+      "24/7 System Monitoring",
+      "Unlimited Download Data",
+      "Branding and design Identity",
+    ],
+    buttonClass: "gt-btn gt-btn-icon",
+    delay: ".6s",
+  },
+  {
+    badge: "Premium Plan",
+    price: "$149.00",
+    period: "Per Month",
+    backgroundImage: "url(/assets/img/bg/pricingCardThumbBg1_1.png)",
+    features: [
+      "Branding And Design Identity",
+      "Web Site Marketing Solutions",
+      "Free 15 GB Linux Hosting",
+      "24/7 System Monitoring",
+      "Unlimited Download Data",
+      "Branding and design Identity",
+    ],
+    buttonClass: "gt-btn style2 gt-btn-icon",
+    delay: ".9s",
+  },
+];
+
+export const pricingCards = [
+  {
+    price: "$49.00",
+    period: { en: "Per Month", fr: "Par mois" },
+    badgeText: { en: "Basic Plan", fr: "Offre Essentielle" },
+    buttonClass: "style3",
+    imageUrl: "/assets/img/shape/pricingBadgeShape.png",
+    features: [
+      { en: "Branding and design identity", fr: "Identité de marque et design" },
+      { en: "Website marketing solutions", fr: "Solutions marketing pour site web" },
+      { en: "Free 15 GB Linux hosting", fr: "15 Go d’hébergement Linux offerts" },
+      { en: "24/7 system monitoring", fr: "Supervision système 24/7" },
+      { en: "Unlimited download data", fr: "Données de téléchargement illimitées" },
+    ],
+  },
+  {
+    price: "$9.00",
+    period: { en: "Per Month", fr: "Par mois" },
+    badgeText: { en: "Starter Plan", fr: "Offre de démarrage" },
+    buttonClass: "style4",
+    imageUrl: "/assets/img/shape/pricingBadgeShape.png",
+    features: [
+      { en: "Branding and design identity", fr: "Identité de marque et design" },
+      { en: "Website marketing solutions", fr: "Solutions marketing pour site web" },
+      { en: "Free 15 GB Linux hosting", fr: "15 Go d’hébergement Linux offerts" },
+      { en: "24/7 system monitoring", fr: "Supervision système 24/7" },
+      { en: "Unlimited download data", fr: "Données de téléchargement illimitées" },
+    ],
+  },
+  {
+    price: "$49.00",
+    period: { en: "Per Month", fr: "Par mois" },
+    badgeText: { en: "Business Plan", fr: "Offre Business" },
+    buttonClass: "style3",
+    imageUrl: "/assets/img/shape/pricingBadgeShape.png",
+    features: [
+      { en: "Branding and design identity", fr: "Identité de marque et design" },
+      { en: "Website marketing solutions", fr: "Solutions marketing pour site web" },
+      { en: "Free 15 GB Linux hosting", fr: "15 Go d’hébergement Linux offerts" },
+      { en: "24/7 system monitoring", fr: "Supervision système 24/7" },
+      { en: "Unlimited download data", fr: "Données de téléchargement illimitées" },
+    ],
+  },
+  // Add more pricing cards here if needed
+];
