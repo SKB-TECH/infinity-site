@@ -1,0 +1,144 @@
+:root {
+  /* =============================================
+   * Infinity Innovation — Official Brand Palette
+   * Source: Charte Graphique v1 (Jan 2024, johk-prod)
+   * =============================================
+   * Primary:   Slate gray  #7E8E95 / RGB 126,142,149
+   * Secondary: Deep navy   #0A0736 / RGB 10,7,54
+   * Base:      White       #FFFFFF / RGB 255,255,255
+   * ============================================= */
+
+  --theme-color: #7e8e95; /* slate — links, icons, accents */
+  --theme-color2: #0a0736; /* navy  — primary CTA, headings */
+  --title-color: #0a0736;
+  --body-color: #445063;
+
+  /* Brand tints (75% / 50% / 25% opacity over white) */
+  --theme-color-75: #9ea9af;
+  --theme-color-50: #bec6ca;
+  --theme-color-25: #dee2e4;
+  --theme-color2-75: #3d3b66;
+  --theme-color2-50: #84839a;
+  --theme-color2-25: #c2c1cd;
+
+  /* Surfaces */
+  --smoke-color: #f7f8fa;
+  --smoke-color2: #f0f3f6;
+  --smoke-color3: #ffffff;
+  --smoke-color4: #dfe3ea;
+  --black-color: #000000;
+  --gray-color: #f5f6f8;
+  --white-color: #ffffff;
+  --light-color: #a2acba;
+  --border-color: #d8dde6;
+
+  /* Typography — brand guide spec */
+  --title-font: "Ubuntu", Arial, sans-serif;
+  --body-font: "Ubuntu", Arial, sans-serif;
+  --icon-font: "Font Awesome 6 Pro";
+
+  /* Layout */
+  --main-container: 1185px;
+  --container-gutters: 30px;
+  --section-space: 120px;
+  --section-space-mobile: 80px;
+  --section-title-space: 60px;
+  --ripple-ani-duration: 5s;
+}
+
+/* Couleurs de variation */
+$theme-color: var(--theme-color);
+$theme-color2: var(--theme-color2);
+$title-color: var(--title-color);
+$body-color: var(--body-color);
+$smoke-color: var(--smoke-color);
+$smoke-color2: var(--smoke-color2);
+$smoke-color3: var(--smoke-color3);
+$smoke-color4: var(--smoke-color4);
+$white-color: var(--white-color);
+$light-color: var(--light-color);
+$black-color: var(--black-color);
+$gray-color: var(--gray-color);
+$border-color: var(--border-color);
+
+/* Variation des polices */
+$icon-font: var(--icon-font);
+$title-font: var(--title-font);
+$body-font: var(--body-font);
+$body-font-size: 16px;
+$body-line-Height: 26px;
+$body-font-weight: 400;
+$p-line-Height: 1.75;
+
+/* Variation des dispositifs */
+$hd: 1921px; /* Grand appareil (plus de 1920px) */
+$xxl: 1500px; /* Très grand appareil */
+$ml: 1399px; /* Appareil large moyen */
+$xl: 1299px; /* Appareil moyen */
+$lg: 1199px; /* Appareil large (ordinateur portable) */
+$md: 991px; /* Appareil moyen (tablette) */
+$sm: 767px; /* Appareil petit */
+$xs: 575px; /* Appareil extra petit */
+$vxs: 375px; /* Appareil extra extra petit */
+
+/* Espacement (modifié pour un espacement standard) */
+$space-count: 20;
+
+$space: var(--section-space); /* Espacement section pour grand appareil */
+$space-extra: calc(var(--section-space) - 45px);
+$space-extra2: calc(var(--section-space) - 60px);
+$space2: calc(var(--section-space) - 20px);
+
+$space-mobile: var(--section-space-mobile); /* Espacement pour petit appareil */
+$space-mobile-extra: calc(var(--section-space-mobile) - 30px);
+
+/* Mapping des couleurs de fond */
+$bgcolorMap: ();
+$bgcolorMap: map-merge(
+  (
+    "theme": $theme-color,
+    "smoke": $smoke-color,
+    "gray": $gray-color,
+    "white": $white-color,
+    "black": $black-color,
+    "title": $title-color,
+  ),
+  $bgcolorMap
+);
+
+/* Mapping des couleurs d'overlay */
+$overlaycolorMap: ();
+$overlaycolorMap: map-merge(
+  (
+    "theme": $theme-color,
+    "title": $title-color,
+    "white": $white-color,
+    "black": $black-color,
+    "overlay1": #131b23,
+  ),
+  $overlaycolorMap
+);
+
+/* Mapping des couleurs du texte */
+$textColorsMap: ();
+$textColorsMap: map-merge(
+  (
+    "theme": $theme-color,
+    "title": $title-color,
+    "body": $body-color,
+    "white": $white-color,
+    "light": $light-color,
+  ),
+  $textColorsMap
+);
+
+/* Mapping des polices */
+$fontsMap: ();
+$fontsMap: map-merge(
+  (
+    "icon": $icon-font,
+    "title": $title-font,
+    "body": $body-font,
+  ),
+  $fontsMap
+);

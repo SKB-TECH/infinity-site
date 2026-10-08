@@ -1,0 +1,157 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+// Admin User Model
+model Admin {
+    id        String   @id @default(cuid())
+    email     String   @unique
+    password  String
+    name      String
+    role      String   @default("admin")
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+// Blog Model
+model Blog {
+    id            String    @id @default(cuid())
+    title         String
+    slug          String    @unique
+    content       String    @db.Text
+    excerpt       String?   @db.Text
+    featuredImage String?
+    author        String
+    category      String
+    tags          String[]
+    views         Int       @default(0)
+    published     Boolean   @default(false)
+    createdAt     DateTime  @default(now())
+    updatedAt     DateTime  @updatedAt
+    comments      Comment[]
+}
+
+// Comments on Blogs
+model Comment {
+    id        String   @id @default(cuid())
+    name      String
+    email     String
+    content   String   @db.Text
+    approved  Boolean  @default(false)
+    blog      Blog     @relation(fields: [blogId], references: [id], onDelete: Cascade)
+    blogId    String
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+// Service Model
+model Service {
+    id          String   @id @default(cuid())
+    title       String
+    slug        String   @unique
+    description String   @db.Text
+    icon        String?
+    image       String?
+    features    String[]
+    order       Int      @default(0)
+    published   Boolean  @default(false)
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+}
+
+// Project Model
+model Project {
+    id           String   @id @default(cuid())
+    title        String
+    slug         String   @unique
+    description  String   @db.Text
+    shortDesc    String?  @db.Text
+    image        String?
+    category     String
+    technologies String[]
+    link         String?
+    published    Boolean  @default(false)
+    createdAt    DateTime @default(now())
+    updatedAt    DateTime @updatedAt
+}
+
+// Team Member Model
+model TeamMember {
+    id        String   @id @default(cuid())
+    name      String
+    position  String
+    image     String?
+    bio       String?  @db.Text
+    email     String?
+    phone     String?
+    socials   Json? // Store social links as JSON
+    order     Int      @default(0)
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+// Testimonial Model
+model Testimonial {
+    id        String   @id @default(cuid())
+    name      String
+    company   String?
+    title     String?
+    image     String?
+    content   String   @db.Text
+    rating    Int      @default(5)
+    order     Int      @default(0)
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+// Pricing Plan Model
+model PricingPlan {
+    id          String   @id @default(cuid())
+    name        String
+    price       Float
+    description String?  @db.Text
+    features    String[]
+    highlighted Boolean  @default(false)
+    order       Int      @default(0)
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+}
+
+// FAQ Model
+model FAQ {
+    id        String   @id @default(cuid())
+    question  String
+    answer    String   @db.Text
+    category  String?
+    order     Int      @default(0)
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+// Contact Messages
+model ContactMessage {
+    id        String   @id @default(cuid())
+    name      String
+    email     String
+    phone     String?
+    subject   String
+    message   String   @db.Text
+    read      Boolean  @default(false)
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+// General Settings
+model Settings {
+    id    String @id @default(cuid())
+    key   String @unique
+    value String @db.Text
+}
